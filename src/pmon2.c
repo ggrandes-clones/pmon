@@ -160,7 +160,7 @@ static int handle_proc_ev(int nl_sock) {
                 break;
             }
             default: {
-                printf("event=unknown\n");
+                //printf("event=unknown\n");
                 break;
             }
         }
