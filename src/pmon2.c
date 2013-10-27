@@ -181,6 +181,11 @@ int main(int argc, const char *argv[]) {
     int nl_sock;
     int rc = EXIT_SUCCESS;
 
+    if (geteuid() != 0) {
+        printf("need root permissions\n");
+        exit(EXIT_FAILURE);
+    }
+
     signal(SIGINT, &on_sigint);
     siginterrupt(SIGINT, true);
 
