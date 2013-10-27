@@ -134,6 +134,9 @@ static int handle_proc_ev(int nl_sock) {
                 continue;
             }
             perror("error: netlink recv");
+            if (errno == ENOBUFS) {
+                continue;
+            }
             return -1;
         }
         switch (nlcn_msg.proc_ev.what) {
