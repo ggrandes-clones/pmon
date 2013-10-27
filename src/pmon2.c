@@ -121,11 +121,13 @@ static int handle_proc_ev(int nl_sock) {
                 break;
             }
             case PROC_EVENT_EXEC: {
+                /*
                 if (nlcn_msg.proc_ev.event_data.exec.process_pid !=
                     nlcn_msg.proc_ev.event_data.exec.process_tgid)
                     break;
                 printf("event=exec process.pid=%d\n",
                 nlcn_msg.proc_ev.event_data.exec.process_pid);
+                */
                 break;
             }
             case PROC_EVENT_UID: {
