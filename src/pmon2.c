@@ -131,6 +131,7 @@ static int handle_proc_ev(int nl_sock) {
                 break;
             }
             case PROC_EVENT_UID: {
+                /*
                 if (nlcn_msg.proc_ev.event_data.id.process_pid !=
                     nlcn_msg.proc_ev.event_data.id.process_tgid)
                     break;
@@ -138,9 +139,11 @@ static int handle_proc_ev(int nl_sock) {
                 nlcn_msg.proc_ev.event_data.id.process_pid,
                 nlcn_msg.proc_ev.event_data.id.r.ruid,
                 nlcn_msg.proc_ev.event_data.id.e.euid);
+                */
                 break;
             }
             case PROC_EVENT_GID: {
+                /*
                 if (nlcn_msg.proc_ev.event_data.id.process_pid !=
                     nlcn_msg.proc_ev.event_data.id.process_tgid)
                     break;
@@ -148,6 +151,7 @@ static int handle_proc_ev(int nl_sock) {
                 nlcn_msg.proc_ev.event_data.id.process_pid,
                 nlcn_msg.proc_ev.event_data.id.r.rgid,
                 nlcn_msg.proc_ev.event_data.id.e.egid);
+                */
                 break;
             }
             case PROC_EVENT_EXIT: {
